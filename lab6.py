@@ -6,6 +6,14 @@ def encode(password):
         final += str((int(item) + 3) % 10)
     return final
 
+def decode(password):
+    final = ''
+
+    for numbers in password:
+        new_numbers = str((int(numbers) - 3) % 10)
+        final += new_numbers
+    return final
+
 def main():
     quit = False
     encoded = ''
